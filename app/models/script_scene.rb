@@ -1,0 +1,2 @@
+class ScriptScene < ApplicationRecord
+end
