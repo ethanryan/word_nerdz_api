@@ -10,8 +10,12 @@
 #below sorts all files in db/seeds folder alphabetically and loads each seed file into the database
 #thus seeding the database with screenplays
 
-# Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].sort.each { |seed| load seed }
 
 Dir[File.join(Rails.root, 'db', 'seeds', '*.rb')].sort.each do |seed|
+  load seed
+end
+
+###### make below load all files in seeds/01_plots_horror
+Dir[File.join(Rails.root, 'db', 'seeds/01_plots_horror', '*.rb')].sort.each do |seed|
   load seed
 end
