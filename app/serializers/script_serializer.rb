@@ -9,8 +9,8 @@ class ScriptSerializer < ActiveModel::Serializer
              :genres,
              :plots,
              :scenes,
-             
-             :characters,
+
+             :characters
 end
 
 #to make serializer, in rails terminal:::
