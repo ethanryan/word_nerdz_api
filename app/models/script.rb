@@ -38,9 +38,10 @@ class Script < ApplicationRecord
 
     ##### CHANGE THIS METHOD... want script content to be an object...
     def script_content
-      full_script = self.scenes.map do |p| #full_script is an array of strings
-        p.text #making each paragraph / scene text, but i don't want this, i want objects instead
-      end
+    ##  full_script = self.scenes.map #instead of below, just make script content same as scenes?!!?!?!??!
+     full_script = self.scenes.map do |p| #full_script is an array of strings
+       p.text #making each paragraph / scene text, but i don't want this, i want objects instead
+     end
     full_script.join("-----") #joining array into a string with lines inbetween each scene, that i later break... but i don't want this either
     end #end story_content
 
