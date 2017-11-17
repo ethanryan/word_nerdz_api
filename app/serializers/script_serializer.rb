@@ -8,7 +8,7 @@ class ScriptSerializer < ActiveModel::Serializer
 
             #  :genres,
             #  :plots,
-             :scenes,
+            #  :scenes,
 
              :characters
 end

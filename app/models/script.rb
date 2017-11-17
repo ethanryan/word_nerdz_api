@@ -6,6 +6,8 @@ class Script < ApplicationRecord
   has_many :plots, through: :scenes
   has_many :genres, through: :plots
 
+  serialize :content, Array #this presents the script content as an array of scene objects, instead of a big string of text.
+
   # def create_content
   #   puts "hello"
   #   return 666
@@ -40,7 +42,7 @@ class Script < ApplicationRecord
     def script_content
       #full_script = self.scenes.map #instead of below, just make script content same as scenes?!!?!?!??!
      full_script = self.scenes.map do |p| #full_script is an array of strings
-       p #return array of of objects, instead of array of text 
+       p #return array of of objects, instead of array of text
        #p.text #making each paragraph / scene text, but i don't want this, i want objects instead
      end
     # full_script.join("-----") #joining array into a string with lines inbetween each scene, that i later break... but i don't want this either
