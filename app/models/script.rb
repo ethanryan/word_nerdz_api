@@ -18,6 +18,7 @@ class Script < ApplicationRecord
     def create_content(genre) #took out characters as a argument for now
       scenes = (1..SCRIPT_LENGTH).to_a #array of scenes, 1-5 (for now)
 
+      puts "comments via create_content method:"
       puts scenes
       puts "all of the scenes in order"
 
@@ -41,12 +42,10 @@ class Script < ApplicationRecord
     ##### CHANGE THIS METHOD... want script content to be an object...
     def script_content
       #full_script = self.scenes.map #instead of below, just make script content same as scenes?!!?!?!??!
-     full_script = self.scenes.map do |p| #full_script is an array of strings
-       p #return array of of objects, instead of array of text
-       #p.text #making each paragraph / scene text, but i don't want this, i want objects instead
+     full_script = self.scenes.map do |each_scene| #full_script is an array of strings
+       each_scene #return array of objects, instead of array of text
      end
-    # full_script.join("-----") #joining array into a string with lines inbetween each scene, that i later break... but i don't want this either
-    end #end story_content
+  end #end script_content
 
     ######from last app, word_nerds_api story generator
 

@@ -4,13 +4,17 @@ class ScriptSerializer < ActiveModel::Serializer
              :title,
              :content,
 
-             :user,
+            #  :user, #don't need to show user...
 
-            #  :genres,
-            #  :plots,
-            #  :scenes,
+            #  :genres, #don't need to show genres...
+            #  :plots, #don't need to show plots...
 
-             :characters
+             :scenes #but we DO need to show the scenes, but why???
+                      #something about the serializer, or the seed files,
+                      #or create_content method in the script model??
+
+
+            #  :characters #don't need to show characters...
 end
 
 #to make serializer, in rails terminal:::

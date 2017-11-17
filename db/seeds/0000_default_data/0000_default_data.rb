@@ -24,13 +24,13 @@ users = User.create([
  script = Script.create([
  title: 'first script',
  user_id: 1,
- content: 'this is the plot of the first script ----- for test'
+ content: ['this is the plot of the first script ----- for test'] #making this an array
  ])
 
  script_2 = Script.create([
  title: 'second script',
  user_id: 1,
- content: 'this is the second script, script #2'
+ content: ['this is the second script, script #2'] #making this an array
  ])
 
 
