@@ -6,8 +6,8 @@ class ScriptSerializer < ActiveModel::Serializer
 
              :user,
 
-             :genres,
-             :plots,
+            #  :genres,
+            #  :plots,
              :scenes,
 
              :characters

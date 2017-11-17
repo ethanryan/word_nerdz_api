@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171103182013) do
+ActiveRecord::Schema.define(version: 20171117013417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "characters", force: :cascade do |t|
     t.integer "script_id"
@@ -56,7 +57,7 @@ ActiveRecord::Schema.define(version: 20171103182013) do
   create_table "scripts", force: :cascade do |t|
     t.string "title"
     t.integer "user_id"
-    t.string "content"
+    t.text "content", default: "{}"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
